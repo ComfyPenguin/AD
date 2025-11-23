@@ -1,0 +1,115 @@
+{
+  "runners": [
+    {
+      "name": "Eliud Kipchoge",
+      "nationality": "Kenya",
+      "age": 39,
+      "club": "NN Running Team",
+      "status": "Active",
+      "marathon_names": ["Berlin", "London", "Chicago", "Tokyo", "Rotterdam", "Hamburg", "Rio de Janeiro"],
+      "fastest_marathon": "Berlin 2022",
+      "record": "2:01:09",
+      "notable_fact": "First human to run a marathon in under 2 hours in controlled conditions (1:59:40)"
+    },
+    {
+      "name": "Haile Gebrselassie",
+      "nationality": "Ethiopia",
+      "age": 51,
+      "club": "Unknown",
+      "status": "Retired",
+      "marathon_names": ["Berlin", "Dubai", "Amsterdam", "Tokyo", "London", "New York", "Fukuoka"],
+      "fastest_marathon": "Berlin 2008",
+      "record": "2:03:59",
+      "notable_fact": "Known for his world records in long-distance track events and his prolific marathon career"
+    },
+    {
+      "name": "Kenenisa Bekele",
+      "nationality": "Ethiopia",
+      "age": 41,
+      "club": "NN Running Team",
+      "status": "Active",
+      "marathon_names": ["Berlin", "Tokyo", "London", "New York", "Chicago"],
+      "fastest_marathon": "Berlin 2019",
+      "record": "2:01:41",
+      "notable_fact": "Former world record holder in the 5,000m and 10,000m, close to breaking Kipchoge's marathon record"
+    },
+    {
+      "name": "Dennis Kimetto",
+      "nationality": "Kenya",
+      "age": 39,
+      "club": "Unknown",
+      "status": "Retired",
+      "marathon_names": ["Berlin", "Chicago", "Tokyo", "Boston", "Rotterdam"],
+      "fastest_marathon": "Berlin 2014",
+      "record": "2:02:57",
+      "notable_fact": "Former world record holder, first athlete to run under 2 hours and 3 minutes in a marathon"
+    },
+    {
+      "name": "Wilson Kipsang",
+      "nationality": "Kenya",
+      "age": 42,
+      "club": "Unknown",
+      "status": "Retired",
+      "marathon_names": ["Berlin", "London", "New York", "Tokyo", "Frankfurt", "Seoul"],
+      "fastest_marathon": "Berlin 2013",
+      "record": "2:03:23",
+      "notable_fact": "Former world record holder and two-time London Marathon winner"
+    },
+    {
+      "name": "Paula Radcliffe",
+      "nationality": "United Kingdom",
+      "age": 50,
+      "club": "Unknown",
+      "status": "Retired",
+      "marathon_names": ["London", "New York", "Chicago", "Helsinki", "Paris"],
+      "fastest_marathon": "London 2003",
+      "record": "2:15:25",
+      "notable_fact": "Held the women's marathon world record for more than 16 years"
+    },
+    {
+      "name": "Brigid Kosgei",
+      "nationality": "Kenya",
+      "age": 30,
+      "club": "Nike Oregon Project",
+      "status": "Active",
+      "marathon_names": ["Chicago", "London", "Tokyo", "Paris", "Milan"],
+      "fastest_marathon": "Chicago 2019",
+      "record": "2:14:04",
+      "notable_fact": "Current women's marathon world record holder"
+    },
+    {
+      "name": "Tsegaye Kebede",
+      "nationality": "Ethiopia",
+      "age": 36,
+      "club": "Unknown",
+      "status": "Retired",
+      "marathon_names": ["Chicago", "London", "Paris", "Fukuoka", "Rotterdam", "Boston"],
+      "fastest_marathon": "Chicago 2012",
+      "record": "2:04:38",
+      "notable_fact": "Olympic marathon medalist and two-time London Marathon winner"
+    },
+    {
+      "name": "Samuel Wanjiru",
+      "nationality": "Kenya",
+      "age": 24,
+      "club": "Unknown",
+      "status": "Deceased",
+      "marathon_names": ["London", "Beijing", "Chicago", "New York"],
+      "fastest_marathon": "London 2009",
+      "record": "2:05:10",
+      "notable_fact": "2008 Olympic gold medalist, the first Kenyan to win this title"
+    },
+    {
+      "name": "Meb Keflezighi",
+      "nationality": "United States",
+      "age": 48,
+      "club": "Unknown",
+      "status": "Retired",
+      "marathon_names": ["Boston", "New York", "London", "Los Angeles", "San Diego"],
+      "fastest_marathon": "Boston 2014",
+      "record": "2:08:37",
+      "notable_fact": "First American to win the Boston Marathon since 1983"
+    }
+  ]
+}
+

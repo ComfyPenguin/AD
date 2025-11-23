@@ -1,0 +1,78 @@
+<dam>
+    <alumne>
+        <nom>Joan</nom>
+        <cognom>Soler</cognom>
+        <edat>24</edat>
+        <direccio>C/ Major 24</direccio>
+        <moduls>
+            <modul>
+                <nom>Acces a Dades</nom>
+                <qualificacio>10</qualificacio>
+                <profe>José Ant.</profe>
+            </modul>
+            <modul>
+                <nom>PMDM</nom>
+                <qualificacio>9</qualificacio>
+                <profe>José Alfredo</profe>
+            </modul>
+        </moduls>
+        <nom_projecte>App 1</nom_projecte>
+    </alumne>
+    <alumne>
+        <nom>Maria</nom>
+        <cognom>García</cognom>
+        <edat>22</edat>
+        <direccio>C/ Lluna 15</direccio>
+        <moduls>
+            <modul>
+                <nom>Acces a Dades</nom>
+                <qualificacio>8</qualificacio>
+                <profe>José Ant.</profe>
+            </modul>
+            <modul>
+                <nom>PMDM</nom>
+                <qualificacio>7</qualificacio>
+                <profe>José Alfredo</profe>
+            </modul>
+        </moduls>
+        <nom_projecte>App 2</nom_projecte>
+    </alumne>
+    <alumne>
+        <nom>Pau</nom>
+        <cognom>Martí</cognom>
+        <edat>23</edat>
+        <direccio>C/ Sol 8</direccio>
+        <moduls>
+            <modul>
+                <nom>Acces a Dades</nom>
+                <qualificacio>9</qualificacio>
+                <profe>José Ant.</profe>
+            </modul>
+            <modul>
+                <nom>PMDM</nom>
+                <qualificacio>8</qualificacio>
+                <profe>José Alfredo</profe>
+            </modul>
+        </moduls>
+        <nom_projecte>App 3</nom_projecte>
+    </alumne>
+    <alumne>
+        <nom>Laura</nom>
+        <cognom>Fernández</cognom>
+        <edat>21</edat>
+        <direccio>C/ Mar 3</direccio>
+        <moduls>
+            <modul>
+                <nom>Acces a Dades</nom>
+                <qualificacio>10</qualificacio>
+                <profe>José Ant.</profe>
+            </modul>
+            <modul>
+                <nom>PMDM</nom>
+                <qualificacio>10</qualificacio>
+                <profe>José Alfredo</profe>
+            </modul>
+        </moduls>
+        <nom_projecte>App 4</nom_projecte>
+    </alumne>
+</dam>

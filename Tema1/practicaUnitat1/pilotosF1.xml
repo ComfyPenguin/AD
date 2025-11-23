@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pilotos>
+    <piloto>
+        <id>1</id>
+        <nombre>Max Verstappen</nombre>
+        <equipo>Red Bull Racing</equipo>
+        <pais>Países Bajos</pais>
+        <puntos>412.5</puntos>
+        <podios>96</podios>
+        <victorias>61</victorias>
+        <activo>true</activo>
+        <altura_m>1.81</altura_m>
+        <vuelta_rapida_seg>96.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>2</id>
+        <nombre>Lewis Hamilton</nombre>
+        <equipo>Mercedes</equipo>
+        <pais>Reino Unido</pais>
+        <puntos>378.2</puntos>
+        <podios>197</podios>
+        <victorias>103</victorias>
+        <activo>true</activo>
+        <altura_m>1.74</altura_m>
+        <vuelta_rapida_seg>197.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>3</id>
+        <nombre>Charles Leclerc</nombre>
+        <equipo>Ferrari</equipo>
+        <pais>Mónaco</pais>
+        <puntos>285.7</puntos>
+        <podios>39</podios>
+        <victorias>5</victorias>
+        <activo>true</activo>
+        <altura_m>1.8</altura_m>
+        <vuelta_rapida_seg>39.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>4</id>
+        <nombre>Lando Norris</nombre>
+        <equipo>McLaren</equipo>
+        <pais>Reino Unido</pais>
+        <puntos>298.4</puntos>
+        <podios>20</podios>
+        <victorias>2</victorias>
+        <activo>true</activo>
+        <altura_m>1.77</altura_m>
+        <vuelta_rapida_seg>20.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>5</id>
+        <nombre>Carlos Sainz</nombre>
+        <equipo>Ferrari</equipo>
+        <pais>España</pais>
+        <puntos>270.9</puntos>
+        <podios>21</podios>
+        <victorias>3</victorias>
+        <activo>true</activo>
+        <altura_m>1.78</altura_m>
+        <vuelta_rapida_seg>21.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>6</id>
+        <nombre>George Russell</nombre>
+        <equipo>Mercedes</equipo>
+        <pais>Reino Unido</pais>
+        <puntos>230.3</puntos>
+        <podios>13</podios>
+        <victorias>2</victorias>
+        <activo>true</activo>
+        <altura_m>1.85</altura_m>
+        <vuelta_rapida_seg>13.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>7</id>
+        <nombre>Sergio Pérez</nombre>
+        <equipo>Red Bull Racing</equipo>
+        <pais>México</pais>
+        <puntos>245.1</puntos>
+        <podios>37</podios>
+        <victorias>6</victorias>
+        <activo>true</activo>
+        <altura_m>1.73</altura_m>
+        <vuelta_rapida_seg>37.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>8</id>
+        <nombre>Fernando Alonso</nombre>
+        <equipo>Aston Martin</equipo>
+        <pais>España</pais>
+        <puntos>198.8</puntos>
+        <podios>106</podios>
+        <victorias>32</victorias>
+        <activo>true</activo>
+        <altura_m>1.71</altura_m>
+        <vuelta_rapida_seg>106.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>9</id>
+        <nombre>Sebastian Vettel</nombre>
+        <equipo>Aston Martin</equipo>
+        <pais>Alemania</pais>
+        <puntos>3000.0</puntos>
+        <podios>122</podios>
+        <victorias>53</victorias>
+        <activo>false</activo>
+        <altura_m>1.75</altura_m>
+        <vuelta_rapida_seg>122.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>10</id>
+        <nombre>Kimi Räikkönen</nombre>
+        <equipo>Alfa Romeo</equipo>
+        <pais>Finlandia</pais>
+        <puntos>1873.0</puntos>
+        <podios>103</podios>
+        <victorias>21</victorias>
+        <activo>false</activo>
+        <altura_m>1.75</altura_m>
+        <vuelta_rapida_seg>103.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>11</id>
+        <nombre>Nico Rosberg</nombre>
+        <equipo>Mercedes</equipo>
+        <pais>Alemania</pais>
+        <puntos>1594.0</puntos>
+        <podios>57</podios>
+        <victorias>23</victorias>
+        <activo>false</activo>
+        <altura_m>1.78</altura_m>
+        <vuelta_rapida_seg>57.0</vuelta_rapida_seg>
+    </piloto>
+    <piloto>
+        <id>12</id>
+        <nombre>Jenson Button</nombre>
+        <equipo>McLaren</equipo>
+        <pais>Reino Unido</pais>
+        <puntos>1235.0</puntos>
+        <podios>50</podios>
+        <victorias>15</victorias>
+        <activo>false</activo>
+        <altura_m>1.82</altura_m>
+        <vuelta_rapida_seg>50.0</vuelta_rapida_seg>
+    </piloto>
+</pilotos>

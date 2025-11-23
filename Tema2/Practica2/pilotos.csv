@@ -1,0 +1,13 @@
+﻿nombre,equipo,pais,edad,puntos,podios,victorias,activo,altura_m,vuelta_rapida_seg
+Max Verstappen,Red Bull Racing,Países Bajos,27,412.5,96,61,True,1.81,76.123
+Lewis Hamilton,Mercedes,Reino Unido,40,378.2,197,103,True,1.74,77.289
+Charles Leclerc,Ferrari,Mónaco,27,285.7,39,5,True,1.8,77.556
+Lando Norris,McLaren,Reino Unido,25,298.4,20,2,True,1.77,78.002
+Carlos Sainz,Ferrari,España,30,270.9,21,3,True,1.78,77.812
+George Russell,Mercedes,Reino Unido,27,230.3,13,2,True,1.85,77.963
+Sergio Pérez,Red Bull Racing,México,35,245.1,37,6,True,1.73,78.104
+Fernando Alonso,Aston Martin,España,44,198.8,106,32,True,1.71,77.654
+Sebastian Vettel,Aston Martin,Alemania,38,3000.0,122,53,False,1.75,76.892
+Kimi Räikkönen,Alfa Romeo,Finlandia,45,1873.0,103,21,False,1.75,77.001
+Nico Rosberg,Mercedes,Alemania,39,1594.0,57,23,False,1.78,76.998
+Jenson Button,McLaren,Reino Unido,45,1235.0,50,15,False,1.82,77.52

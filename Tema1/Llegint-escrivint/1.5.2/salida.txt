@@ -1,0 +1,24 @@
+Mòdul: Accés a Dades
+Hores: 4
+Notes: 8.45
+
+Mòdul: Programació de serveis i processos
+Hores: 2
+Notes: 9.0
+
+Mòdul: Desenvolupament d'interfícies
+Hores: 5
+Notes: 8.0
+
+Mòdul: Programació Multimèdia i dispositiud mòbils
+Hores: 4
+Notes: 7.34
+
+Mòdul: Sistemes de Gestió Empresarial
+Hores: 4
+Notes: 8.2
+
+Mòdul: Itinerari per a l'Ocupabilitat II
+Hores: 3
+Notes: 7.4
+

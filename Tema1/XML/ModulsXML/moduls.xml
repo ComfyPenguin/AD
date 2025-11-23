@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<curso>
+    <modulo>
+        <nombre>AD</nombre>
+        <horas>10</horas>
+        <nota>8</nota>
+    </modulo>
+    <modulo>
+        <nombre>PRG</nombre>
+        <horas>5</horas>
+        <nota>8.20</nota>
+    </modulo>
+</curso>

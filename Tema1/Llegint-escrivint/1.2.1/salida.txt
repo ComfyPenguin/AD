@@ -1,0 +1,112 @@
+    private void accesFiles() {
+
+        //parent directory a partir d'un File
+        File root = new File("/home/jasanchez/Documentos");
+        File subdir = new File(root, "tmp");
+        System.out.println("El directori '" + subdir.getName() + "' es troba dins de '" + subdir.getParent() + "'");
+
+        //parent i child
+        File f0 = new File("/home/jasanchez/Documentos/tmp", "texto.md"); //  Linux
+        System.out.println(f0.exists());
+
+        // absolute paths - pathname
+        File f = new File("/home/jasanchez/Documentos/tmp/texto.md"); //  Linux
+        System.out.println(f.exists());
+
+        //File f = new File("C:\\Usuarios\\jasb\\Dektop\\texto.md"); //  Windows
+
+
+        // relative paths
+        File fr = new File("cotton-polo-shirt.png"); //  Linux
+        System.out.println("L'arxiu " + fr.getName() + " es troba al directori del projecte? " + fr.exists());
+
+
+        //File f = new File("docs\\texto.md"); //  Windows
+        /* Acceso con URI */
+
+        URI uri;  /* file:/// + ruta */
+        try {
+            uri = new URI("file:////home/jasanchez/Documentos/tmp");
+            File dire = new File(uri);
+
+            String[] arxius = dire.list();
+
+            System.out.println("Primer arxiu del directori = " + arxius[0]);
+
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(FilesExamples.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    private void creatingFiles(String[] args) {
+        String ruta = args[0];
+        File f = new File(ruta);
+
+        if (f.exists()) {
+            if (f.isDirectory()) {
+                try {
+
+                    File archivo = new File(f, "exemple.txt");
+
+                    if (archivo.createNewFile()) {
+                        System.out.println("Arxiu creat: " + archivo.getAbsolutePath());
+                    } else {
+                        System.out.println("L'arxiu ja existia: " + archivo.getAbsolutePath());
+                    }
+
+                    /* Creacio d'un nou directori */
+                    File exercicis = new File(f, "Exercicis");
+                    if (exercicis.mkdir()) {
+                        System.out.println("Directori creat: " + exercicis.getAbsolutePath());
+                    } else {
+                        System.out.println("El directori ja existia: " + exercicis.getAbsolutePath());
+                    }
+                    /* Renombrem un directori */
+                    File practiques = new File(f, "Practiques");
+                    System.out.println(exercicis.renameTo(practiques));
+
+
+                    /* Creacio de directoris i subdirectoris a partir d'una ruta */
+                    File directorio = new File(f,"projectes/java/exemples");
+
+                    // Intentar crearlos todos
+                    if (directorio.mkdirs()) {
+                        System.out.println("Directoris creats: " + directorio.getAbsolutePath());
+                    } else {
+                        System.out.println("No se pudieron crear los directorios (puede que ya existan).");
+                    }
+
+                } catch (IOException ex) {
+                    System.out.println("Error al crear l'arxiu o el directori.");
+                }
+            }
+
+        } else {
+            System.out.println("La ruta no existeix.");
+        }
+    }
+
+    private void propertiesFiles(String[] args) {
+        String ruta = args[0];
+        File f = new File(ruta);
+
+        if (f.exists()) {
+            if (f.isFile()) {
+                System.out.println("El tamaño es de " + f.length() + " bytes");
+                System.out.println("Puede ejecutarse: " + f.canExecute());
+                System.out.println("Puede leerse: " + f.canRead());
+                System.out.println("Puede escribirse: " + f.canWrite());
+            } else {
+                String[] losArchivos = f.list();
+                System.out.println("El directorio " + ruta + " contiene:");
+                for (String archivo : losArchivos) {
+                    System.out.println("\t" + archivo);
+                }
+                //propuesta de ampliación: mostrar també el contingut dels subdirectoris per eixida estándar
+            }
+
+        } else {
+            System.out.println("El fichero o ruta no existe");
+        }
+    }
