@@ -56,13 +56,13 @@
       
       <!-- Mapping files. Can be combined-->
       <!-- mapping classes -->
-      <mapping class="com.ad.ieseljust.practica2.Pilot" />
+      <mapping class="com.ad.ieseljust.practica2.objectes.Pilot" />
+      <mapping class="com.ad.ieseljust.practica2.objectes.Equip" />
+
 
             <!-- Maping files-->
-      <!--
-        <mapping resource="class3.hbm.xml" />
-      <mapping resource="class4.hbm.xml" />
-        -->
+<!--      <mapping resource="class3.hbm.xml" />-->
+<!--      <mapping resource="class4.hbm.xml" />-->
           
    
     </session-factory>

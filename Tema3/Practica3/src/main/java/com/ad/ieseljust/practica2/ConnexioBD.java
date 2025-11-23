@@ -8,6 +8,9 @@ package com.ad.ieseljust.practica2;
 import Utils.HibernateUtil;
 import Utils.Utilitats;
 
+import com.ad.ieseljust.practica2.objectes.Equip;
+import com.ad.ieseljust.practica2.objectes.Pilot;
+import lombok.Getter;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -28,10 +31,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author jasb
- */
+@Getter
 public class ConnexioBD {
 
     Connection laConnexio = null;
@@ -71,10 +71,6 @@ public class ConnexioBD {
                 System.out.println("Error: " + ex.getMessage() + ". Status: " + ex.getSQLState());
             }
         }
-    }
-
-    public Connection getLaConnexio() {
-        return laConnexio;
     }
 
     public boolean validaUser(String user) {
@@ -243,21 +239,21 @@ public class ConnexioBD {
             String equip = Utilitats.leerTextoG("Dis-me l'equip: ");
             String pais = Utilitats.leerTextoG("Dis-me el pais: ");
             int edat = Utilitats.leerEnteroG("Dis-me l'edat: ");
-            double punts = Utilitats.leerRealG("Dis-me els punts: ");
-            int podios = Utilitats.leerEnteroG("Dis-me els podios: ");
             int victories = Utilitats.leerEnteroG("Dis-me les victories: ");
-            boolean actiu = Boolean.parseBoolean(Utilitats.leerTextoG("Dis-me si està actiu [True / False]: "));
-            double altura = Utilitats.leerRealG("Dis-me l'altura: ");
-            double volta_rapida = Utilitats.leerRealG("Dis-me la volta més rápida: ");
 
-            Pilot p = new Pilot(nom, equip, pais, edat, punts, podios, victories, actiu, altura, volta_rapida);
-
+            // Iniciar la sesion de Hibernate
             Session laSesion = HibernateUtil.getSessionFactory().getCurrentSession();
+            // Iniciar una transacción
             Transaction tr = laSesion.beginTransaction();
 
+            // Equip e = new Equip(equip);
+            // Creación del objeto a persistir
+            Pilot p = new Pilot(nom, new Equip(equip), pais, edat, victories);
+
+            // Persistir (Que Hibernate lo siga) el objeto
             laSesion.persist(p);
+            // Confirmar los cambios realizados
             tr.commit();
-            
 
             JOptionPane.showMessageDialog(null,
                     "Registre insertat correctament.",
@@ -275,34 +271,37 @@ public class ConnexioBD {
         try {
             String filename = Utilitats.leerTextoG("Digues el nom de l'arxiu CSV amb les dades a incorporar a la base de dades: ");
 
-            //source file
+            // Leer todas las lineas del csv
             List<String> linies = Files.readAllLines(Paths.get(filename));
 
-            linies = linies.subList(1, linies.size() - 1); // Descarta la primera linea
+            // Descarta la primera linea
+            linies = linies.subList(1, linies.size() - 1);
 
+            // Bucle para insertar línea tras línea los datos
             int insertedRows = 0;
-
             for (String linea : linies) {
 
+                // Extraer campos separados por comas
                 String[] camps = linea.split(",");
 
+                // Lectura de atributos por campos
                 String nom = camps[0];
                 String equip = camps[1];
                 String pais = camps[2];
                 int edat = Integer.parseInt(camps[3]);
-                double punts = Double.parseDouble(camps[4]);
-                int podios = Integer.parseInt(camps[5]);
-                int victories = Integer.parseInt(camps[6]);
-                boolean actiu = Boolean.parseBoolean(camps[7]);
-                double altura = Double.parseDouble(camps[8]);
-                double volta_rapida = Double.parseDouble(camps[9]);
+                int victories = Integer.parseInt(camps[4]);
 
+                // Iniciar la sesion de Hibernate
                 Session laSesion = HibernateUtil.getSessionFactory().getCurrentSession();
+                // Iniciar una transacción
                 Transaction tr = laSesion.beginTransaction();
 
-                Pilot p = new Pilot(nom, equip, pais, edat, punts, podios, victories, actiu, altura, volta_rapida);
+                // Creación del objeto a persistir
+                Pilot p = new Pilot(nom, new Equip(equip), pais, edat, victories);
 
+                // Persistir (Que Hibernate lo siga) el objeto
                 laSesion.persist(p);
+                // Confirmar los cambios realizados
                 tr.commit();
 
                 insertedRows++;
@@ -365,7 +364,7 @@ public class ConnexioBD {
                 try {
                     pst = this.laConnexio.prepareStatement(SQLD);
 
-                    // fill placeholders            
+                    // fill placeholders
                     pst.setInt(1, Integer.parseInt(camps[0].trim()));
 
                     // show the query after resolve placeholders

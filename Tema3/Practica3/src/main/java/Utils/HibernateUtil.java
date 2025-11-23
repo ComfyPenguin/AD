@@ -5,6 +5,8 @@
 package Utils;
 
 import java.io.File;
+
+import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -13,6 +15,7 @@ import org.hibernate.cfg.Configuration;
  * @author joange
  */
 public class HibernateUtil {
+    @Getter
     private static final SessionFactory sessionFactory;
 
     // Código estático. Sólo se ejecuta una vez, como un Singleton
@@ -26,10 +29,6 @@ public class HibernateUtil {
             System.err.println("Error en la inicialización.  " + ex);
             throw new ExceptionInInitializerError(ex);
         }
-    }
-
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
     }
 
 }

@@ -8,10 +8,5 @@ CREATE TABLE pilotos(
     equipo VARCHAR(50),
     pais VARCHAR(100),
     edad INT,
-    puntos DOUBLE,
-    podios INT,
-    victorias INT,
-    activo BOOLEAN,
-    altura_m DOUBLE,
-    vuelta_rapida_seg DOUBLE
+    victorias INT
 );
