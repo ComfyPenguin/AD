@@ -56,8 +56,10 @@
       
       <!-- Mapping files. Can be combined-->
       <!-- mapping classes -->
-      <mapping class="com.ad.ieseljust.practica2.objectes.Pilot" />
-      <mapping class="com.ad.ieseljust.practica2.objectes.Equip" />
+      <mapping class="com.ad.ieseljust.practica2.entitats.Pilot" />
+      <mapping class="com.ad.ieseljust.practica2.entitats.Equip" />
+      <mapping class="com.ad.ieseljust.practica2.entitats.Cotxe" />
+      <mapping class="com.ad.ieseljust.practica2.entitats.Circuit" />
 
 
             <!-- Maping files-->

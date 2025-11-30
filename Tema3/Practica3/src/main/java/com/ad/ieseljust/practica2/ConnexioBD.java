@@ -8,8 +8,8 @@ package com.ad.ieseljust.practica2;
 import Utils.HibernateUtil;
 import Utils.Utilitats;
 
-import com.ad.ieseljust.practica2.objectes.Equip;
-import com.ad.ieseljust.practica2.objectes.Pilot;
+import com.ad.ieseljust.practica2.entitats.Equip;
+import com.ad.ieseljust.practica2.entitats.Pilot;
 import lombok.Getter;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -248,10 +248,10 @@ public class ConnexioBD {
 
             // Equip e = new Equip(equip);
             // Creación del objeto a persistir
-            Pilot p = new Pilot(nom, new Equip(equip), pais, edat, victories);
+            // Pilot p = new Pilot(nom, new Equip(equip), pais, edat, victories);
 
             // Persistir (Que Hibernate lo siga) el objeto
-            laSesion.persist(p);
+            // laSesion.persist(p);
             // Confirmar los cambios realizados
             tr.commit();
 
@@ -277,6 +277,11 @@ public class ConnexioBD {
             // Descarta la primera linea
             linies = linies.subList(1, linies.size() - 1);
 
+            // Iniciar la sesion de Hibernate
+            Session laSesion = HibernateUtil.getSessionFactory().getCurrentSession();
+            // Iniciar una transacción
+            Transaction tr = laSesion.beginTransaction();
+
             // Bucle para insertar línea tras línea los datos
             int insertedRows = 0;
             for (String linea : linies) {
@@ -291,27 +296,27 @@ public class ConnexioBD {
                 int edat = Integer.parseInt(camps[3]);
                 int victories = Integer.parseInt(camps[4]);
 
-                // Iniciar la sesion de Hibernate
-                Session laSesion = HibernateUtil.getSessionFactory().getCurrentSession();
-                // Iniciar una transacción
-                Transaction tr = laSesion.beginTransaction();
+
 
                 // Creación del objeto a persistir
-                Pilot p = new Pilot(nom, new Equip(equip), pais, edat, victories);
+                // Pilot p = new Pilot(nom, new Equip(equip), pais, edat, victories);
 
                 // Persistir (Que Hibernate lo siga) el objeto
-                laSesion.persist(p);
-                // Confirmar los cambios realizados
-                tr.commit();
+                // laSesion.persist(p);
+
 
                 insertedRows++;
             }
 
+            // Confirmar los cambios realizados
+            tr.commit();
 
             JOptionPane.showMessageDialog(null,
                     "Les dades han sigut importades a la base de dades.",
                     "Formula1 APP", JOptionPane.INFORMATION_MESSAGE);
+
             System.out.println("\n");
+            System.out.println("Se han insertat " + insertedRows + " camps");
 
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null,
