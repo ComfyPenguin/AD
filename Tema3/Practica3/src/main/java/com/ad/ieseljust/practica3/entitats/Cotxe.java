@@ -1,4 +1,4 @@
-package com.ad.ieseljust.practica2.entitats;
+package com.ad.ieseljust.practica3.entitats;
 
 import jakarta.persistence.*;
 import lombok.Data;

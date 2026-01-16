@@ -1,4 +1,4 @@
-package com.ad.ieseljust.practica2.entitats;
+package com.ad.ieseljust.practica3.entitats;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -60,18 +60,21 @@ public class Pilot implements Serializable {
     private Equip equip;
 
     // Relació molts a molts amb Circuit
-    @ManyToMany
-    @JoinTable(
-        // name: Nom de la taula intermèdia que es crearà a la base de dades per gestionar la relació M:N
-        name = "pilot_circuit",
-        // joinColumns: Columna de clau forana que fa referència a l'entitat actual (Pilot)
-        joinColumns = @JoinColumn(name = "idPilot"),
-        // inverseJoinColumns: Columna de clau forana que fa referència a l'entitat relacionada (Circuit)
-        inverseJoinColumns = @JoinColumn(name = "idCircuit")
-    )
+    @ManyToMany(cascade=CascadeType.PERSIST, fetch=FetchType.LAZY)
+    @JoinTable(name="carreres",
+          joinColumns = {@JoinColumn(
+            name="idPilot",
+            foreignKey = @ForeignKey(name = "FK_CAR_PIL" ))},
+          inverseJoinColumns = {@JoinColumn(
+            name="idCircuit",
+            foreignKey = @ForeignKey(name = "FK_CAR_CIR" ))})
     private List<Circuit> circuits;
 
-
+    public void setCircuit(Circuit c){
+        if(!this.circuits.contains(c)){
+            this.circuits.add(c);
+        }
+    }
 
 }
 

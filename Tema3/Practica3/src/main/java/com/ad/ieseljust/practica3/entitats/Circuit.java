@@ -1,8 +1,9 @@
-package com.ad.ieseljust.practica2.entitats;
+package com.ad.ieseljust.practica3.entitats;
 
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -42,6 +43,15 @@ public class Circuit implements Serializable {
     }
 
     // Relació molts a molts amb Pilot
-    @ManyToMany(mappedBy = "circuits") // Indica aon está el mapeat
+    @ToString.Exclude
+    @ManyToMany(cascade = CascadeType.PERSIST,
+            fetch = FetchType.LAZY,
+            mappedBy = "circuits") // Indica aon está el mapeat
     private List<Pilot> pilots;
+
+    public void setPilot(Pilot p){
+        if(!this.pilots.contains(p)){
+            this.pilots.add(p);
+        }
+    }
 }

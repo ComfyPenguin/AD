@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- TO COMPLETE -->
+        <!-- Connection properties -->
+        <!-- Driver JDBC -->
+        <property name="connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <!-- Add ?createDatabaseIfNotExist=true to create database  -->
+        <property name="connection.url">
+            jdbc:mysql://localhost:3308/GalacticTribesHB?createDatabaseIfNotExist=true
+        </property>
+
+        <!--user and pass -->
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+
+        <!-- extra conf -->
+
+        <!-- JDBC connection pool for concurrent connections -->
+        <property name="connection.pool_size">5</property>
+
+        <!--  dialect connector. Useful for Foreing Keys-->
+        <!--
+          <property name="dialect">
+          org.hibernate.dialect.MySQL8Dialect
+        </property>
+        -->
+
+        <!-- one thread one session -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- show "reals" SQL ops. only for development-->
+        <property name="show_sql">true</property>
+
+        <!-- DB maintenance -->
+        <property name="hbm2ddl.auto">validate</property>
+
+        <!-- options hbm2dll:
+          create :
+            create always DB when session factory is loaded. Data will be lost.
+          update :
+            Data will be safe, but database structure will be update.
+            Useful in production.
+          create-drop :
+            like create and dropping the database.
+          validate:
+            check the mapping between database and beans.
+        -->
+
+
+        <!-- Mapping files. Can be combined-->
+        <!-- mapping classes -->
+        <mapping class="com.ad.ieseljust.galactictribesra3.models.Battle"/>
+        <mapping class="com.ad.ieseljust.galactictribesra3.models.Planet"/>
+        <mapping class="com.ad.ieseljust.galactictribesra3.models.Player"/>
+        <mapping class="com.ad.ieseljust.galactictribesra3.models.Tribe"/>
+        <mapping class="com.ad.ieseljust.galactictribesra3.models.Weapon"/>
+
+        <!-- Maping files-->
+        <!--      <mapping resource="class3.hbm.xml" />-->
+        <!--      <mapping resource="class4.hbm.xml" />-->
+
+
+    </session-factory>
+</hibernate-configuration>

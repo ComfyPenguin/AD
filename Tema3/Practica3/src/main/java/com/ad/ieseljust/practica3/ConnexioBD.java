@@ -3,13 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ad.ieseljust.practica2;
+package com.ad.ieseljust.practica3;
 
 import Utils.HibernateUtil;
 import Utils.Utilitats;
 
-import com.ad.ieseljust.practica2.entitats.Equip;
-import com.ad.ieseljust.practica2.entitats.Pilot;
 import lombok.Getter;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

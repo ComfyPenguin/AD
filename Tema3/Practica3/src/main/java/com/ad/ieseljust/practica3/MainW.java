@@ -3,13 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ad.ieseljust.practica2;
-
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
+package com.ad.ieseljust.practica3;
 
 /**
  *

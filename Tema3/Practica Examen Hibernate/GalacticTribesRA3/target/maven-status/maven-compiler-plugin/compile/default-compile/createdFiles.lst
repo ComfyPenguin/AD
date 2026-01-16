@@ -1,0 +1,8 @@
+com/ad/ieseljust/galactictribesra3/utils/Utilitats.class
+com/ad/ieseljust/galactictribesra3/models/Weapon.class
+com/ad/ieseljust/galactictribesra3/models/Tribe.class
+com/ad/ieseljust/galactictribesra3/GalacticTribesRA3.class
+com/ad/ieseljust/galactictribesra3/models/Battle.class
+com/ad/ieseljust/galactictribesra3/models/Player.class
+com/ad/ieseljust/galactictribesra3/models/Planet.class
+com/ad/ieseljust/galactictribesra3/utils/HibernateUtil.class

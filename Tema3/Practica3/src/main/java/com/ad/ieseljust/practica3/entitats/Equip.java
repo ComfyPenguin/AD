@@ -1,4 +1,4 @@
-package com.ad.ieseljust.practica2.entitats;
+package com.ad.ieseljust.practica3.entitats;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -41,4 +41,10 @@ public class Equip implements Serializable {
     // Relació un a molts amb Pilot
     @OneToMany(mappedBy = "equip", cascade = CascadeType.ALL) // Indica aon está el mapeat i el tipus de cascada
     private List<Pilot> pilots;
+
+    public void setPilot(Pilot p){
+        if(!this.pilots.contains(p)){
+            this.pilots.add(p);
+        }
+    }
 }

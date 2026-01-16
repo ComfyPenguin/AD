@@ -1,13 +1,13 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.ad.ieseljust.practica2;
+package com.ad.ieseljust.practica3;
 
 import Utils.HibernateUtil;
-import com.ad.ieseljust.practica2.entitats.Circuit;
-import com.ad.ieseljust.practica2.entitats.Cotxe;
-import com.ad.ieseljust.practica2.entitats.Equip;
-import com.ad.ieseljust.practica2.entitats.Pilot;
+import com.ad.ieseljust.practica3.entitats.Circuit;
+import com.ad.ieseljust.practica3.entitats.Cotxe;
+import com.ad.ieseljust.practica3.entitats.Equip;
+import com.ad.ieseljust.practica3.entitats.Pilot;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author jasb
  */
-public class Practica2 {
+public class Practica3 {
 
     /**
      * @param args the command line arguments
@@ -28,6 +28,11 @@ public class Practica2 {
         //ValidacioW vld = new ValidacioW();
         //vld.setVisible(true);
 
+        // proba1();
+
+    }
+
+    public static void proba1(){
         // Crear sessió de Hibernate
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
